@@ -4,8 +4,10 @@ Using Neo4j algorithms to aggregate when, where, and data sources for attacks in
 
 ## Sample Data
 To start by getting a large set of related sample data, I will use the twitter API to get the content from these ~500k tweets related to the Arab Spring in Yemen. 
-
 http://dfreelon.org/2012/02/11/arab-spring-twitter-data-now-available-sort-of/
+
+Another good sample data option is the below, which is cool because it uses context to figure out location
+https://revealproject.eu/geoparse-benchmark-open-dataset/
 
 ## Outline
 
