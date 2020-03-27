@@ -2,6 +2,11 @@
 
 Using Neo4j algorithms to aggregate when, where, and data sources for attacks in Syria. Possible algorithms include a similarity measure between posts, so you can create a weighted network and apply community detection. Community detection to cluster posts into events. Centrality as a way to measure influence and dependence.
 
+## Sample Data
+To start by getting a large set of related sample data, I will use the twitter API to get the content from these ~500k tweets related to the Arab Spring in Yemen. 
+
+http://dfreelon.org/2012/02/11/arab-spring-twitter-data-now-available-sort-of/
+
 ## Outline
 
 I plan to import data from different social media platforms, then use some of neo4j's builtin algorithms to do some Social media clustering. I hope to answer these questions:
