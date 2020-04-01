@@ -1,0 +1,28 @@
+// Write an unwind script to create nodes
+{
+  "keywordHierarchy": [
+    {
+      "node": "attack",
+      "words": [
+        "aggression",
+        "barrage",
+        "charge",
+        "incursion",
+        "intervention",
+        "intrusion",
+        "invasion",
+        "offensive"
+      ]
+    },
+    {
+      "node": "bombing",
+      "words": ["bomb", "missile", "projectile", "rocket", "torpedo"]
+    },
+    { "node": "ied", "words": ["ied", "blast"] },
+    { "node": "gunshot", "words": ["gun", "shot"] },
+    { "node": "stabbing", "words": ["knife", "stab"] },
+    { "node": "location", "words": [] },
+    { "node": "yemenConflict", "words": ["yemen", "houthi", "saudi", "uae"] },
+    { "node": "syriaConflict", "words": ["iran", "syria", "turkey", "russia"] }
+  ]
+}
