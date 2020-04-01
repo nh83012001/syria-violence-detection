@@ -2,8 +2,9 @@
 {
   "keywordHierarchy": [
     {
-      "node": "attack",
+      "node": "Attack",
       "words": [
+        "attack",
         "aggression",
         "barrage",
         "charge",
@@ -15,14 +16,17 @@
       ]
     },
     {
-      "node": "bombing",
+      "node": "Bombing",
       "words": ["bomb", "missile", "projectile", "rocket", "torpedo"]
     },
-    { "node": "ied", "words": ["ied", "blast"] },
-    { "node": "gunshot", "words": ["gun", "shot"] },
-    { "node": "stabbing", "words": ["knife", "stab"] },
-    { "node": "location", "words": [] },
-    { "node": "yemenConflict", "words": ["yemen", "houthi", "saudi", "uae"] },
-    { "node": "syriaConflict", "words": ["iran", "syria", "turkey", "russia"] }
+    { "node": "Ied", "words": ["ied", "blast"] },
+    { "node": "Gunshot", "words": ["gun", "shot", "sniper"] },
+    { "node": "Stabbing", "words": ["knife", "stab"] },
+    { "node": "Location", "words": [] },
+    { "node": "YemenConflict", "words": ["yemen", "houthi", "saudi", "uae"] },
+    {
+      "node": "SyriaConflict",
+      "words": ["iran", "syria", "turkey", "russia", "regime"]
+    }
   ]
 }
