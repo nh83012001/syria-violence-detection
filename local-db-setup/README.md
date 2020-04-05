@@ -1,8 +1,9 @@
 # Running local database/uploading json of tweets to it/getting setup for NLP and Algorithms playground
 
-- Download Neo4j desktop (do an update if already installed)
+### NLP setup
+- Download Neo4j desktop 
 - Start a database 3.5.17
-- Add Apoc and Graph Algorithms plugins at the bottom of the summary page
+- Add Apoc plugin at the bottom of the summary page
 - Click the 3 horizontal dots on summary page next to your database, choose ‘Manage’
 - Click on settings and add the following statement
     `apoc.import.file.enabled=true`
@@ -46,6 +47,11 @@ MERGE (t)-[:HAS_ANNOTATED_TEXT]->(result)
 RETURN count(result);
 ```
 
+### Algorithms Playground
+- Update neo4j to latest version
+- Add Graph Data Sciene Library plugin
+- Start database
+- Click open dropdown and open Graph Data Science Playground
 
 
 
