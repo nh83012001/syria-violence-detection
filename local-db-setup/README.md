@@ -26,9 +26,11 @@ Restart your database and open up your browser Run the following statements 1 by
 
 ```CREATE CONSTRAINT ON (n:Tag) ASSERT n.id IS UNIQUE;`CREATE CONSTRAINT ON (n:Sentence) ASSERT n.id IS UNIQUE; ```
 
-```javascript
-CREATE INDEX ON :Tag(value);`CALL ga.nlp.config.setDefaultLanguage('en')`CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false}, stopWords: '+,result, all, during', threadNumber: 20})`CALL ga.nlp.processor.pipeline.default('customStopWords')
-```
+```CREATE INDEX ON :Tag(value);```
+
+```CALL ga.nlp.config.setDefaultLanguage('en')`CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false}, stopWords: '+,result, all, during', threadNumber: 20})```
+
+```CALL ga.nlp.processor.pipeline.default('customStopWords')```
 
 
 Run these one at a time
