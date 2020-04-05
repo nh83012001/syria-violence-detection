@@ -17,11 +17,11 @@ MERGE(user) - [: POSTED] -> (tweet)
  
 
 // add in all the entities the user mentions in the tweet
-FOREACH(mention IN e.user_mentions | MERGE(mentionedUser: User { name: mention.screen_name }) MERGE(tweet) - [: MENTIONED_USER] -> (mentionedUser))
-FOREACH(hashtag IN e.hashtags | MERGE(mentionedHashtag: Hashtag { text: hashtag.text }) MERGE(tweet) - [: MENTIONED_HASHTAG] -> (mentionedHashtag))
-FOREACH(symbol IN e.symbols | MERGE(mentionedSymbol: Symbol { text: symbol.text }) MERGE(tweet) - [: MENTIONED_SYMBOL] -> (mentionedSymbol))
+FOREACH(mention IN e.user_mentions | MERGE(mentionedUser: User { name: mention.screen_name }) MERGE(tweet) - [:MENTIONED_USER] -> (mentionedUser))
+FOREACH(hashtag IN e.hashtags | MERGE(mentionedHashtag: Hashtag { text: hashtag.text }) MERGE(tweet) - [:MENTIONED_HASHTAG] -> (mentionedHashtag))
+FOREACH(symbol IN e.symbols | MERGE(mentionedSymbol: Symbol { text: symbol.text }) MERGE(tweet) - [:MENTIONED_SYMBOL] -> (mentionedSymbol))
 FOREACH(url IN e.urls | MERGE(mentionedUrl: Url { url: url.url }) MERGE(tweet) - [: MENTIONED_URL] -> (mentionedUrl))
-FOREACH(media IN e.media | MERGE(mentionedMedia: Media { media_url: media.media_url, type: media.type }) MERGE(tweet) - [: MENTIONED_MEDIA] -> (mentionedMedia))
+FOREACH(media IN e.media | MERGE(mentionedMedia: Media { media_url: media.media_url, type: media.type }) MERGE(tweet) - [:MENTIONED_MEDIA] -> (mentionedMedia))
 // TODO Do a count for anythign with :Keyword labels words to see how many times it is in the content
 
 // // ************Script for loading keyword hierarchy
