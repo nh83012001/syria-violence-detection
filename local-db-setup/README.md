@@ -14,11 +14,16 @@
 - Put all those in a folder called NLP locally
 - Copy and paste them into the plugins folder by clicking plugins in the ‘open folder’ part of manage database
 - Put these lines inside of your config file
-```dbms.unmanaged_extension_classes=com.graphaware.server=/graphaware```
-```com.graphaware.runtime.enabled=true```
-```com.graphaware.module.NLP.1=com.graphaware.nlp.module.NLPBootstrapper```
-
-```javascript
+```
+dbms.unmanaged_extension_classes=com.graphaware.server=/graphaware
+```
+```
+com.graphaware.runtime.enabled=true
+```
+```
+com.graphaware.module.NLP.1=com.graphaware.nlp.module.NLPBootstrapper
+```
+```
 dbms.security.procedures.whitelist=ga.nlp._
 ```
 Restart your database and open up your browser Run the following statements 1 by 1 in the browser
