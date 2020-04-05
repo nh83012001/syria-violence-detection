@@ -73,6 +73,8 @@ RETURN count(result);
 
 
 Good resources for much of the above are in the following articles
+
 [Neo4j using NLP](https://medium.com/neo4j/using-nlp-in-neo4j-ac40bc92196f)
+
 [Graph Data Science Library](https://medium.com/neo4j/the-graph-algorithms-playground-and-graph-data-science-library-69575a0fb329)
 
