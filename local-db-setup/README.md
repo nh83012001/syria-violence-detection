@@ -72,7 +72,7 @@ RETURN count(result);
 
 
 
-Good resources for much of the above are in the following articles
+### Resources for much of the above
 
 [Neo4j using NLP](https://medium.com/neo4j/using-nlp-in-neo4j-ac40bc92196f)
 
