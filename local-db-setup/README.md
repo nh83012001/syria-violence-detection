@@ -41,7 +41,10 @@ CREATE CONSTRAINT ON (n:Sentence) ASSERT n.id IS UNIQUE;
 CREATE INDEX ON :Tag(value);
 ```
 ```
-CALL ga.nlp.config.setDefaultLanguage('en')`CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false}, stopWords: '+,result, all, during', threadNumber: 20})
+CALL ga.nlp.config.setDefaultLanguage('en')
+```
+```
+CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false}, stopWords: '+,result, all, during', threadNumber: 20})
 ```
 ```
 CALL ga.nlp.processor.pipeline.default('customStopWords')
