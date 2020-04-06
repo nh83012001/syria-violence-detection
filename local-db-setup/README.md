@@ -67,6 +67,14 @@ MERGE (t)-[:HAS_ANNOTATED_TEXT]->(result)
 RETURN count(result);
 ```
 
+```javascript
+MATCH (n:Tag)
+CALL ga.nlp.enrich.concept({tag: n, depth:2, admittedRelationships:["IsA","PartOf"]})
+YIELD result
+RETURN count(result);
+```
+
+
 ### Algorithms Playground
 - Update neo4j to latest version
 - Add Graph Data Sciene Library plugin
