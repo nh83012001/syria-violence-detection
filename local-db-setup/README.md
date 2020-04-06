@@ -24,7 +24,7 @@ com.graphaware.runtime.enabled=true
 com.graphaware.module.NLP.1=com.graphaware.nlp.module.NLPBootstrapper
 ```
 ```
-dbms.security.procedures.whitelist=ga.nlp._
+dbms.security.procedures.whitelist=ga.nlp.*
 ```
 Restart your database and open up your browser Run the following statements 1 by 1 in the browser
 
