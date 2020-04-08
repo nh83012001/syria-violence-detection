@@ -81,7 +81,7 @@ RETURN count(result);
 ```
 
 
-If you get an error like this - "WebSocket connection failure. Due to security constraints in your web browser, the reason for the failure is not available to this Neo4j Driver". Add the following to your config file
+If you get an error like this - "WebSocket connection failure. Due to security constraints in your web browser, the reason for the failure is not available to this Neo4j Driver" 
 [Look here](https://community.neo4j.com/t/how-to-fix-serviceunavailable-websocket-connection-failure-error-on-neo4j-enterprise-ami-deployed-on-ec2/6634)
 
 
