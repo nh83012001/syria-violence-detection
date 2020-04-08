@@ -81,6 +81,11 @@ RETURN count(result);
 ```
 
 
+If you get an error like this - "WebSocket connection failure. Due to security constraints in your web browser, the reason for the failure is not available to this Neo4j Driver". Add the following to your config file
+
+```dbms.connector.bolt.address=0.0.0.0:7687```
+
+
 ### Algorithms Playground
 - Update neo4j to latest version
 - Add Graph Data Sciene Library plugin
