@@ -66,6 +66,12 @@ YIELD result
 MERGE (t)-[:HAS_ANNOTATED_TEXT]->(result)
 RETURN count(result);
 ```
+```javascript
+CALL apoc.periodic.iterate(
+"MATCH (t:Tweet) RETURN t",
+"CALL ga.nlp.annotate({text: t.text, id: id(t), pipeline: 'customStopWords'})
+YIELD result MERGE (n)-[:HAS_ANNOTATED_TEXT]->(result)", {batchSize:1, iterateList:true})
+```
 
 ```javascript
 MATCH (n:Tag)
