@@ -44,7 +44,7 @@ CREATE INDEX ON :Tag(value);
 CALL ga.nlp.config.setDefaultLanguage('en')
 ```
 ```
-CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false}, stopWords: '+,result, all, during', threadNumber: 20})
+CALL ga.nlp.processor.addPipeline({textProcessor: 'com.graphaware.nlp.processor.stanford.StanfordTextProcessor', name: 'customStopWords', processingSteps: {tokenize: true, ner: true, dependency: false, sentiment: true}, stopWords: '+,result, all, during', threadNumber: 20})
 ```
 ```
 CALL ga.nlp.processor.pipeline.default('customStopWords')
@@ -66,6 +66,8 @@ YIELD result
 MERGE (t)-[:HAS_ANNOTATED_TEXT]->(result)
 RETURN count(result);
 ```
+
+### Option instead of the above if you need to itterate and you have APOC
 ```javascript
 CALL apoc.periodic.iterate(
 "MATCH (t:Tweet) RETURN t",
@@ -78,6 +80,12 @@ MATCH (n:Tag)
 CALL ga.nlp.enrich.concept({tag: n, depth:2, admittedRelationships:["IsA","PartOf"]})
 YIELD result
 RETURN count(result);
+```
+
+``` javascript
+MATCH (t:Tweet)-[]-(a:AnnotatedText) 
+CALL ga.nlp.sentiment(a) YIELD result 
+RETURN result;
 ```
 
 
